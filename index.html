@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ecos del Olvido - Demo Oficial</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --main-bg: #181c24;
+      --accent: #4e9cff;
+      --text: #f4f4f4;
+      --card-bg: #23283a;
+      --shadow: 0 4px 24px rgba(0,0,0,0.3);
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: var(--main-bg);
+      color: var(--text);
+    }
+    header {
+      background: linear-gradient(90deg, #23283a 60%, #4e9cff 100%);
+      padding: 2rem 0 1rem 0;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    header img.logo {
+      width: 120px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin: 0.2em 0 0.1em 0;
+      letter-spacing: 2px;
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #b0cfff;
+      margin-bottom: 1.5em;
+    }
+    nav {
+      margin: 1em 0;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 1.2em;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .container {
+      max-width: 1100px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 2em;
+      margin-bottom: 2em;
+    }
+    .download-btn {
+      background: var(--accent);
+      color: #fff;
+      font-size: 1.3rem;
+      padding: 1em 2.5em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 2px 8px #0004;
+      transition: background 0.2s;
+      margin-top: 1em;
+    }
+    .download-btn:hover {
+      background: #2566b3;
+    }
+    .descargas {
+      margin-top: 1em;
+      font-size: 1.1em;
+      color: #b0cfff;
+    }
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5em;
+      justify-content: center;
+    }
+    .galeria img {
+      width: 320px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      background: #222;
+    }
+    .equipo {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2em;
+      justify-content: center;
+    }
+    .miembro {
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 1.5em;
+      text-align: center;
+      width: 220px;
+      box-shadow: var(--shadow);
+    }
+    .miembro img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.7em;
+      border: 3px solid var(--accent);
+    }
+    .miembro h4 {
+      margin: 0.3em 0 0.1em 0;
+      font-size: 1.1em;
+    }
+    .miembro p {
+      font-size: 0.98em;
+      color: #b0cfff;
+      margin: 0.2em 0 0 0;
+    }
+    footer {
+      background: #23283a;
+      color: #b0cfff;
+      text-align: center;
+      padding: 1.5em 0 1em 0;
+      font-size: 1em;
+      margin-top: 3em;
+    }
+    .redes a {
+      color: var(--accent);
+      margin: 0 0.7em;
+      font-size: 1.5em;
+      transition: color 0.2s;
+    }
+    .redes a:hover {
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .galeria img, .miembro { width: 95vw; }
+      .container { padding: 0 0.2em; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- EDITABLE: Cambia el logo aquí -->
+    <img src="assets/logo.png" alt="Logo Ecos del Olvido" class="logo">
+    <h1>Ecos del Olvido</h1>
+    <div class="subtitle">Demo Oficial – Un viaje a través de la memoria y el misterio</div>
+    <nav>
+      <a href="#sobre">Sobre el juego</a>
+      <a href="#demo">Demo</a>
+      <a href="#contenido-demo">¿Qué contiene la demo?</a>
+      <a href="#proximamente">Próximas actualizaciones</a>
+      <a href="#galeria">Galería</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <div class="container">
+    <section id="sobre" class="card">
+      <h2>¿De qué trata?</h2>
+      <!-- EDITABLE: Cambia la descripción del juego aquí -->
+      <p>
+        <strong>Ecos del Olvido</strong> es una aventura narrativa donde exploras los recuerdos fragmentados de un protagonista atrapado entre la realidad y el olvido. A través de escenarios oníricos, deberás resolver acertijos, interactuar con personajes misteriosos y descubrir la verdad detrás de su historia. Cada decisión afecta el desenlace, invitando a la reflexión sobre la memoria, la identidad y el perdón.
+      </p>
+      <p>
+        <em>¿Podrás reconstruir el pasado antes de que se desvanezca para siempre?</em>
+      </p>
+    </section>
+    <section id="demo" class="card" style="text-align:center;">
+      <h2>Descarga la Demo</h2>
+      <!-- EDITABLE: Cambia el enlace de Google Drive en el script JS más abajo -->
+      <button class="download-btn" id="downloadBtn">
+        <i class="fa fa-download"></i> Descargar Demo
+      </button>
+      <div class="descargas">
+        <span id="contadorDescargas">0</span> descargas
+      </div>
+      <form id="emailForm" style="margin-top:1em;">
+        <input type="email" id="emailInput" placeholder="Tu correo (opcional para novedades)" style="padding:0.5em;border-radius:5px;border:none;width:220px;">
+        <button type="submit" style="padding:0.5em 1em;border-radius:5px;border:none;background:var(--accent);color:#fff;font-weight:700;cursor:pointer;">Notificarme</button>
+      </form>
+      <div id="emailMsg" style="margin-top:0.5em;color:#b0cfff;"></div>
+    </section>
+    <section id="contenido-demo" class="card">
+      <h2>¿Qué contiene la demo?</h2>
+      <!-- EDITABLE: Cambia los puntos según el contenido real de tu demo -->
+      <ul>
+        <li>Primer capítulo jugable con exploración y resolución de acertijos.</li>
+        <li>Introducción a la historia y personajes principales.</li>
+        <li>Ambientes y música original.</li>
+        <li>Interfaz y mecánicas básicas de interacción.</li>
+        <li>Guardado automático de progreso.</li>
+      </ul>
+    </section>
+    <section id="proximamente" class="card">
+      <h2>Próximas actualizaciones</h2>
+      <!-- EDITABLE: Cambia los puntos según tus planes futuros -->
+      <ul>
+        <li>Nuevos capítulos y expansión de la historia.</li>
+        <li>Más personajes y rutas alternativas.</li>
+        <li>Mejoras gráficas y optimización de rendimiento.</li>
+        <li>Soporte para más idiomas.</li>
+        <li>Logros y coleccionables.</li>
+        <li>Opciones de accesibilidad ampliadas.</li>
+      </ul>
+    </section>
+    <section id="galeria" class="card">
+      <h2>Galería</h2>
+      <div class="galeria">
+        <!-- EDITABLE: Cambia los src por tus imágenes reales -->
+        <img src="assets/captura1.jpg" alt="Captura 1">
+        <img src="assets/captura2.jpg" alt="Captura 2">
+        <img src="assets/captura3.jpg" alt="Captura 3">
+        <!-- Agrega más imágenes aquí -->
+      </div>
+    </section>
+    <section id="equipo" class="card">
+      <h2>Equipo</h2>
+      <div class="equipo">
+        <!-- EDITABLE: Cambia los integrantes, fotos y roles aquí -->
+        <div class="miembro">
+          <img src="assets/integrante1.jpg" alt="Integrante 1">
+          <h4>Nombre Apellido</h4>
+          <p>Rol principal</p>
+        </div>
+        <div class="miembro">
+          <img src="assets/integrante2.jpg" alt="Integrante 2">
+          <h4>Nombre Apellido</h4>
+          <p>Rol principal</p>
+        </div>
+        <!-- Agrega más integrantes aquí -->
+      </div>
+    </section>
+    <section id="contacto" class="card" style="text-align:center;">
+      <h2>Contacto y Redes</h2>
+      <div class="redes">
+        <!-- EDITABLE: Cambia los enlaces de redes sociales y correo -->
+        <a href="mailto:ecosdelolvido@gmail.com" title="Email"><i class="fa fa-envelope"></i></a>
+        <a href="https://twitter.com/tu_cuenta" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/tu_cuenta" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más redes si quieres -->
+      </div>
+      <p style="margin-top:1em;">¿Tienes dudas o sugerencias? ¡Escríbenos!</p>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Ecos del Olvido. Todos los derechos reservados.
+  </footer>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script>
+    // EDITABLE: Reemplaza esto con tu configuración de Firebase
+    const firebaseConfig = {
+      apiKey: "TU_API_KEY",
+      authDomain: "TU_AUTH_DOMAIN",
+      projectId: "TU_PROJECT_ID",
+      storageBucket: "TU_STORAGE_BUCKET",
+      messagingSenderId: "TU_MESSAGING_SENDER_ID",
+      appId: "TU_APP_ID",
+      measurementId: "TU_MEASUREMENT_ID"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    // Contador de descargas
+    const contadorElem = document.getElementById('contadorDescargas');
+    const contadorDoc = db.collection('descargas').doc('contador');
+
+    // Inicializa el contador si no existe
+    contadorDoc.get().then(doc => {
+      if (!doc.exists) {
+        contadorDoc.set({ total: 0 });
+        contadorElem.textContent = 0;
+      } else {
+        contadorElem.textContent = doc.data().total || 0;
+      }
+    });
+
+    // Escucha cambios en tiempo real
+    contadorDoc.onSnapshot(doc => {
+      if (doc.exists) {
+        contadorElem.textContent = doc.data().total || 0;
+      }
+    });
+
+    // Botón de descarga
+    document.getElementById('downloadBtn').addEventListener('click', function() {
+      // Suma una descarga de forma transaccional
+      db.runTransaction(async (transaction) => {
+        const doc = await transaction.get(contadorDoc);
+        const nuevoTotal = (doc.exists ? doc.data().total : 0) + 1;
+        transaction.set(contadorDoc, { total: nuevoTotal });
+      });
+      // Registra usuario anónimo con fecha
+      db.collection('descargas').add({
+        fecha: new Date().toISOString(),
+        userAgent: navigator.userAgent
+      });
+      // EDITABLE: Cambia el enlace de Google Drive aquí
+      window.open('https://drive.google.com/tu_link_demo', '_blank');
+    });
+
+    // Formulario de email
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = document.getElementById('emailInput').value.trim();
+      if (email) {
+        db.collection('emails').add({
+          fecha: new Date().toISOString(),
+          email: email,
+          userAgent: navigator.userAgent
+        });
+        document.getElementById('emailMsg').textContent = "¡Gracias! Te avisaremos de novedades.";
+        document.getElementById('emailInput').value = "";
+      } else {
+        document.getElementById('emailMsg').textContent = "Por favor, ingresa un correo válido.";
+      }
+    });
+  </script>
+</body>
+</html>
